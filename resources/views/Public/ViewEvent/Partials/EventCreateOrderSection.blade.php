@@ -90,12 +90,12 @@
                 <div class="row"><div class="col-md-12">&nbsp;</div></div>
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="form-group">
-                            <div class="custom-checkbox">
-                                {!! Form::checkbox('is_business', 1, null, ['data-toggle' => 'toggle', 'id' => 'is_business']) !!}
-                                {!! Form::label('is_business', trans("Public_ViewEvent.is_business"), ['class' => 'control-label']) !!}
-                            </div>
-                        </div>
+{{--                        <div class="form-group">--}}
+{{--                            <div class="custom-checkbox">--}}
+{{--                                {!! Form::checkbox('is_business', 1, null, ['data-toggle' => 'toggle', 'id' => 'is_business']) !!}--}}
+{{--                                {!! Form::label('is_business', trans("Public_ViewEvent.is_business"), ['class' => 'control-label']) !!}--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
                     </div>
                 </div>
                 <div class="row"><div class="col-md-12">&nbsp;</div></div>
