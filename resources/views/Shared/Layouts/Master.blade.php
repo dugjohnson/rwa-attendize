@@ -69,7 +69,7 @@
                             @lang("Top.create_organiser")
                         </a>
                     </li>
-                    @foreach($organiser as $org)
+                    @foreach($organisers as $org)
                         <li>
                             <a href="{{route('showOrganiserDashboard', ['organiser_id' => $org->id])}}">
                                 <i class="ico ico-building"></i> &nbsp;
