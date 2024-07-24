@@ -7,7 +7,7 @@ return [
     'ticket_status_sold_out'        => 1,
     'ticket_status_after_sale_date' => 2,//
     'enable_test_payments'          => env('ENABLE_TEST_PAYMENTS', false),
-    'enable_dummy_payment_gateway'  => false,
+    'enable_dummy_payment_gateway'  => true,
     'payment_gateway_dummy'         => 0,
     'payment_gateway_stripe'        => 1,
     'payment_gateway_paypal'        => 2,
@@ -68,7 +68,7 @@ return [
     'default_datetime_format'       => env('DEFAULT_DATETIME_FORMAT', 'Y-m-d H:i'),
     'default_query_cache'           => 120, #Minutes
     'default_locale'                => 'en',
-    'default_payment_gateway'       => 1, #Stripe=1 Paypal=2
+    'default_payment_gateway'       => -1, #Stripe=1 Paypal=2
 
     'cdn_url_user_assets'   => '',
     'cdn_url_static_assets' => '',
