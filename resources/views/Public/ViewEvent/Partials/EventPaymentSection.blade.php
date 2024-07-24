@@ -65,7 +65,7 @@
         </div>
         <div class="col-md-8 col-md-pull-4">
             <div class="row">
-
+                @php $payment_gateway = false;  @endphp
                 @if($order_requires_payment)
                 @include('Public.ViewEvent.Partials.OfflinePayments')
                 @endif
