@@ -62,9 +62,10 @@
 
                 {!! Form::hidden('event_id', $event->id) !!}
 
-                <h3> @lang("Public_ViewEvent.your_information")</h3>
+                <h3> @lang("Public_ViewEvent.your_information") </h3>
 
                 <div class="row">
+                    <h4>Name to appear on badge</h4>
                     <div class="col-xs-6">
                         <div class="form-group">
                             {!! Form::label("order_first_name", trans("Public_ViewEvent.first_name")) !!}
