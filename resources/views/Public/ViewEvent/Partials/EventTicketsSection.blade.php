@@ -22,7 +22,10 @@
                                 <?php
                                 $is_free_event = true;
                                 ?>
-                                @foreach($tickets->where('is_hidden', false) as $ticket)
+                                @foreach($tickets->where('is_hidden', false)
+                                                 ->where('start_sale_date','<=',Carbon\Carbon::now())
+                                                 ->where('end_sale_data','>=',Carbon\Carbon::now())
+                                                 as $ticket)
                                     <tr class="ticket" property="offers" typeof="Offer">
                                         <td>
                                 <span class="ticket-title semibold" property="name">
