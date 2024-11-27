@@ -23,8 +23,8 @@
                                 $is_free_event = true;
                                 ?>
                                 @foreach($tickets->where('is_hidden', false)
-                                                 ->where('start_sale_date','<=',Carbon\Carbon::now())
-                                                 ->where('end_sale_data','>=',Carbon\Carbon::now())
+                                                 ->where('sale_status' === config('attendize.ticket_status_before_sale_date'),false)
+                                                 ->where('sale_status' === config('attendize.ticket_status_after_sale_date'),false)
                                                  as $ticket)
                                     <tr class="ticket" property="offers" typeof="Offer">
                                         <td>
