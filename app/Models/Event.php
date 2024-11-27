@@ -199,12 +199,12 @@ class Event extends MyBaseModel
 
     public function startDateBetter()
     {
-        return $this->start_date->format('M j, Y');
+        return $this->start_date->format('F j, Y');
 
     }
     public function endDateBetter()
     {
-        return $this->end_date->format('M j, Y');
+        return $this->end_date->format('F j, Y');
 
     }
     /**
