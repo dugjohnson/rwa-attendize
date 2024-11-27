@@ -6,7 +6,7 @@ return [
     'attendee_cancelled'                => 'Cancelled',
     'below_order_details_header'        => '',
     'below_payment_information_header'  => '',
-    'below_tickets'                     => 'Choose the number of tickets and click "register"..gitignore',
+    'below_tickets'                     => 'Choose the number of tickets and click "register".',
     'booking_fee'                       => 'Booking Fee',
     'booking_fees'                      => 'Booking Fees',
     'business_address'                  => 'Business Address',
