@@ -19,13 +19,16 @@
                     <div class="content">
                         <div class="tickets_table_wrap">
                             <table class="table">
-                                <?php
-                                $is_free_event = true;
-                                ?>
-                                @foreach($tickets->where('is_hidden', false)
-                                                 ->where('sale_status' === config('attendize.ticket_status_before_sale_date'),false)
-                                                 ->where('sale_status' === config('attendize.ticket_status_after_sale_date'),false)
-                                                 as $ticket)
+                                    <?php
+                                    $is_free_event = true;
+                                    ?>
+                                @foreach($tickets->where('is_hidden', false) as $ticket)
+                                    @if ($ticket->sale_status === config('attendize.ticket_status_after_sale_date'))
+                                        @continue
+                                    @endif
+                                    @if($ticket->sale_status === config('attendize.ticket_status_before_sale_date'))
+                                        @continue
+                                    @endif
                                     <tr class="ticket" property="offers" typeof="Offer">
                                         <td>
                                 <span class="ticket-title semibold" property="name">
@@ -41,9 +44,9 @@
                                                     @lang("Public_ViewEvent.free")
                                                     <meta property="price" content="0">
                                                 @else
-                                                    <?php
-                                                    $is_free_event = false;
-                                                    ?>
+                                                        <?php
+                                                        $is_free_event = false;
+                                                        ?>
                                                     <span title='{{money($ticket->price, $event->currency)}} @lang("Public_ViewEvent.ticket_price") + {{money($ticket->total_booking_fee, $event->currency)}} @lang("Public_ViewEvent.booking_fees")'>{{money($ticket->total_price, $event->currency)}} </span>
                                                     <span class="tax-amount text-muted text-smaller">{{ ($event->organiser->tax_name && $event->organiser->tax_value) ? '(+'.money(($ticket->total_price*($event->organiser->tax_value)/100), $event->currency).' '.$event->organiser->tax_name.')' : '' }}</span>
                                                     <meta property="priceCurrency"
@@ -94,25 +97,27 @@
                                     </tr>
                                 @endforeach
                                 @if ($tickets->where('is_hidden', true)->count() > 0)
-                                <tr class="has-access-codes" data-url="{{route('postShowHiddenTickets', ['event_id' => $event->id])}}">
-                                    <td colspan="3"  style="text-align: left">
-                                        @lang("Public_ViewEvent.has_unlock_codes")
-                                        <div class="form-group" style="display:inline-block;margin-bottom:0;margin-left:15px;">
-                                            {!!  Form::text('unlock_code', null, [
-                                            'class' => 'form-control',
-                                            'id' => 'unlock_code',
-                                            'style' => 'display:inline-block;width:65%;text-transform:uppercase;',
-                                            'placeholder' => 'ex: UNLOCKCODE01',
-                                        ]) !!}
-                                            {!! Form::button(trans("basic.apply"), [
-                                                'class' => "btn btn-success",
-                                                'id' => 'apply_access_code',
-                                                'style' => 'display:inline-block;margin-top:-2px;',
-                                                'data-dismiss' => 'modal',
+                                    <tr class="has-access-codes"
+                                        data-url="{{route('postShowHiddenTickets', ['event_id' => $event->id])}}">
+                                        <td colspan="3" style="text-align: left">
+                                            @lang("Public_ViewEvent.has_unlock_codes")
+                                            <div class="form-group"
+                                                 style="display:inline-block;margin-bottom:0;margin-left:15px;">
+                                                {!!  Form::text('unlock_code', null, [
+                                                'class' => 'form-control',
+                                                'id' => 'unlock_code',
+                                                'style' => 'display:inline-block;width:65%;text-transform:uppercase;',
+                                                'placeholder' => 'ex: UNLOCKCODE01',
                                             ]) !!}
-                                        </div>
-                                    </td>
-                                </tr>
+                                                {!! Form::button(trans("basic.apply"), [
+                                                    'class' => "btn btn-success",
+                                                    'id' => 'apply_access_code',
+                                                    'style' => 'display:inline-block;margin-top:-2px;',
+                                                    'data-dismiss' => 'modal',
+                                                ]) !!}
+                                            </div>
+                                        </td>
+                                    </tr>
                                 @endif
                                 <tr>
                                     <td colspan="3" style="text-align: center">
@@ -124,7 +129,7 @@
                                         @if(!$is_free_event)
                                             <div class="hidden-xs pull-left">
                                                 <img class=""
-{{--                                                     src="{{asset('assets/images/public/EventPage/credit-card-logos.png')}}"/>--}}
+                                                {{--                                                     src="{{asset('assets/images/public/EventPage/credit-card-logos.png')}}"/>--}}
                                                 @if($event->enable_offline_payments)
 
                                                     <div class="help-block" style="font-size: 11px;">
