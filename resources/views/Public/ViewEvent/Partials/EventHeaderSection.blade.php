@@ -27,7 +27,7 @@
             <h1 property="name">{{$event->title}}</h1>
             <div class="event_venue">
                 <span property="startDate" content="{{ $event->start_date->toIso8601String() }}">
-                    {{ $event->startDateFormatted() }}
+                    {{ $event->startDateBette() }}
                 </span>
                 -
                 <span property="endDate" content="{{ $event->end_date->toIso8601String() }}">

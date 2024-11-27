@@ -197,6 +197,12 @@ class Event extends MyBaseModel
         return $this->start_date->format(config('attendize.default_datetime_format'));
     }
 
+    public function startDateBetter()
+    {
+        return $this->start_date->format('m-d-Y H:i');
+
+    }
+
     /**
      * Parse end_date to a Carbon instance
      *
