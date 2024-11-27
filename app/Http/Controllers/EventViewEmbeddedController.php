@@ -18,8 +18,11 @@ class EventViewEmbeddedController extends Controller
         $event = Event::findOrFail($event_id);
 
         $data = [
-            'event'       => $event,
-            'tickets'     => $event->tickets()->where('is_hidden', 0)->orderBy('sort_order', 'asc')->get(),
+            'event' => $event,
+            'tickets' => $event->tickets()->where('is_hidden', 0)
+                ->where('start_sale_date','<',now())
+                ->where('end_sale_data','>',now())
+                ->orderBy('sort_order', 'asc')->get(),
             'is_embedded' => '1',
         ];
 
