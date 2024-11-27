@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Event;
+use Carbon\Carbon;
 
 class EventViewEmbeddedController extends Controller
 {
@@ -20,8 +21,8 @@ class EventViewEmbeddedController extends Controller
         $data = [
             'event' => $event,
             'tickets' => $event->tickets()->where('is_hidden', 0)
-                ->where('start_sale_date','<',now())
-                ->where('end_sale_data','>',now())
+                ->where('start_sale_date','<',Carbon::now())
+                ->where('end_sale_data','>',Carbon::now())
                 ->orderBy('sort_order', 'asc')->get(),
             'is_embedded' => '1',
         ];
