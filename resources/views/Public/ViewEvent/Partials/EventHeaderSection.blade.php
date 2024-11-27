@@ -34,7 +34,7 @@
                      @if($event->start_date->diffInDays($event->end_date) == 0)
                         {{ $event->end_date->format('H:i') }}
                      @else
-                        {{ $event->endDateFormatted() }}
+                        {{ $event->endDateBetter() }}
                      @endif
                 </span>
                 @lang("Public_ViewEvent.at")
