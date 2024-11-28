@@ -21,8 +21,6 @@ class EventViewEmbeddedController extends Controller
         $data = [
             'event' => $event,
             'tickets' => $event->tickets()->where('is_hidden', 0)
-//                ->where('start_sale_date','<',Carbon::now())
-//                ->where('end_sale_data','>',Carbon::now())
                 ->orderBy('sort_order', 'asc')->get(),
             'is_embedded' => '1',
         ];

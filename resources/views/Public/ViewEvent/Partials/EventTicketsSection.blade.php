@@ -124,6 +124,46 @@
                                         @lang("Public_ViewEvent.below_tickets")
                                     </td>
                                 </tr>
+                                <tr>
+                                    <td colspan="3" style="text-align: center">
+                                        Read the refund policy before registering. You will be asked to confirm that you agree
+                                        during checkout
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" style="text-align: center">
+                                        <div class="well well-small">
+                                            <h3><strong>RWA2025 Conference Registration Refund Policy</strong></h3>
+                                            <p><strong>1. Refund Deadlines and Fees:</strong><br>
+                                                &bull; Refund requests received between <strong>December 3rd and February 14th</strong> will be
+                                                processed with a <strong>$100 processing fee</strong>.<br>
+                                                &bull; Requests received between <strong>February 15th and April 2nd</strong> will be processed
+                                                with a <strong>$150 processing fee.</strong><br>
+                                                &bull; Requests received between <strong>April 3rd and June 1st</strong> will be processed with a
+                                                <strong>$200 processing fee</strong>.<br>
+                                                &bull; <strong>No refunds</strong> will be granted after <strong>June 1st</strong>.</p><br>
+                                            <p><strong>2. Payment Plan Registrations:</strong><br>
+                                                &bull; The <strong>first payment is nonrefundable</strong>.</p>
+                                            <p><strong>3. Exceptional Circumstances:</strong><br>
+                                                Refunds may be issued without a cancellation fee if documentation is provided showing the
+                                                registrant could not attend due to:<br>
+                                                &bull; Serious illness or death of the registrant or an immediate family member.<br>
+                                                &bull; Inability to travel due to natural disasters, war, government regulations, or acts of
+                                                terrorism.</p>
+                                            <p><strong>4. Comped Registration Policy:</strong>
+                                                If a volunteer or committee member with a comped registration cannot attend due to serious
+                                                illness, death of an immediate family member, or travel restrictions (natural disasters, war,
+                                                etc.):<br>
+                                                &bull; The comped registration may be applied to the following year upon submission of written
+                                                proof.<br>
+                                                &bull; The volunteer or committee member must pay the applicable processing fee and any increase
+                                                in registration costs.<br>
+                                                &bull; The comped registration is <strong>non-transferable</strong> to another individual.</p>
+
+                                        </div>
+
+                                    </td>
+                                </tr>
                                 <tr class="checkout">
                                     <td colspan="3">
                                         @if(!$is_free_event)
