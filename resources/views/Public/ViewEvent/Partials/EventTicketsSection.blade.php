@@ -121,18 +121,13 @@
                                 @endif
                                 <tr>
                                     <td colspan="3" style="text-align: center">
-                                        @lang("Public_ViewEvent.below_tickets")
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td colspan="3" style="text-align: center">
                                         Read the refund policy before registering. You will be asked to confirm that you agree
                                         during checkout
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td colspan="3" style="text-align: center">
-                                        <div class="well well-small">
+                                    <td colspan="3" style="text-align: left">
+                                        <div>
                                             <h3><strong>RWA2025 Conference Registration Refund Policy</strong></h3>
                                             <p><strong>1. Refund Deadlines and Fees:</strong><br>
                                                 &bull; Refund requests received between <strong>December 3rd and February 14th</strong> will be
@@ -162,6 +157,11 @@
 
                                         </div>
 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" style="text-align: center">
+                                        @lang("Public_ViewEvent.below_tickets")
                                     </td>
                                 </tr>
                                 <tr class="checkout">
