@@ -4,23 +4,23 @@
 
 @lang("basic.hello") {{ $attendee->first_name }},<br><br>
 
-<p>Thank you for registering for RWA2024 in Austin, TX! We are thrilled to have you join.</p>
-<p>The Conference Committee is dedicated to making this conference not only informative and engaging but also a
-    memorable event for all attendees. You can look forward to an exciting lineup of speakers, interactive sessions, and
-    invaluable networking opportunities.</p>
-
-<p>In the next 24 hours, you will receive a separate email with a link to make your hotel reservations. We encourage you
-    to book your stay as soon as possible to ensure you have accommodations at the conference hotel.</p>
-
-<p>Additionally, we offer fantastic opportunities to enhance your presence at the event. Consider taking advantage of
-    our co-sponsorship opportunities and display board advertising. This is a perfect chance to showcase your name,
-    logo, or even a book cover in front of conference and Expo attendees.</p>
-
-<p>We look forward to welcoming you to RWA2024 and are confident it will be an enriching and enjoyable experience for
-    you.</p>
-
-<p>If you have questions, please send them to conference@rwa.org.</p>
-
+<p>Thank you for registering for RWA2025 in Niagara Falls Fallsview, Ontario, Canada! We’re excited to have you
+    join us.</p>
+<p>To complete your registration, please look for an invoice from PayPal in your inbox. Full payment is required to
+    finalize your registration. If you selected the payment plan, your first payment will be billed now, and the
+    second payment will be billed 45 days later.</p>
+<p>Here’s a preview of the tentative conference schedule (please note that the schedule is subject to change):</p>
+<p> Wednesday, July 16: Retreats, Focused Intense Workshops, Welcome Reception (Keynote speaker TBA)</p>
+<p>Thursday, July 17: Workshops, After-Hours Meet-ups</p>
+<p>Friday, July 18: Workshops, After-Hours Party</p>
+<p> Saturday, July 19: Awards Ceremony, Pitch Sessions, Expo</p>
+<p>A separate email with hotel reservation details will follow. We recommend booking early to secure your stay at
+    the conference hotel.</p>
+<p>If you have any questions, please contact us at conference@rwa.org.</p>
+<p>We look forward to seeing you at RWA2025 for an inspiring and memorable event!</p>
+<p>Best regards,<br>
+    The RWA Team<br>
+    Conference Committee</p>
 
 {{ @trans("Order_Emails.tickets_attached") }} <a href="{{route('showOrderDetails', ['order_reference' => $attendee->order->order_reference])}}">{{route('showOrderDetails', ['order_reference' => $attendee->order->order_reference])}}</a>.
 

@@ -5,26 +5,24 @@
 
     {!! @trans("Order_Emails.successful_order", ["name"=>$order->event->title]) !!}<br><br>
 
-    <p>Thank you for registering for #RWA2024 in Austin, TX! We're excited to have you join us for a series of
-        informative and interactive sessions designed to advance your romance writing career.</p>
-    <p>Volunteering at the conference is a fantastic way to enhance your experience and connect with fellow attendees.
-        Plus, all conference volunteers are entered into a chance drawing for a free conference registration for next
-        year's annual conference (certain rules apply). To sign up as a conference volunteer, 
-        <a href="https://forms.gle/wTiFkcruRQUnu8XC6" target="_blank">please use this link.</a></p>
-    <p>In addition to the workshops, we are thrilled to announce the RWA2024 Scavenger Hunt with fabulous prizes. The
-        rules will be posted on the conference website soon, so stay tuned!</p>
-    <p>We also have a planned special excursion trip to the Erin Condren store in Austin, TX, followed by a delightful
-        dinner on Sunday, October 13, from 4:00 PM to 9:00 PM. Please note that there is an additional charge for this
-        excursion and space is limited. For more details, feel free to email us at 
-        <a href="mailto:conference@rwa.org"> conference@rwa.org.</a></p>
-    <p>Don't miss the chance to get your logo or book covers in front of conference and Expo attendees through our
-        display boards. <a href="https://www.rwa.org/rwa-annual-conference-display-board" target="_blank">For more information, click here.</a></p>
-    <p>You can also get your name and logo in front of conference attendees through our co-sponsorship opportunities,
-        <a href="https://www.rwa.org/rwa-annual-conference-sponsorship-opportunities" target="_blank">which you can learn more about here.</a></p>
-    <p>Thank you again for your support, and we look forward to seeing you at the conference!</p>
+    <p>Thank you for registering for RWA2025 in Niagara Falls Fallsview, Ontario, Canada! We’re excited to have you
+        join us.</p>
+    <p>To complete your registration, please look for an invoice from PayPal in your inbox. Full payment is required to
+        finalize your registration. If you selected the payment plan, your first payment will be billed now, and the
+        second payment will be billed 45 days later.</p>
+    <p>Here’s a preview of the tentative conference schedule (please note that the schedule is subject to change):</p>
+    <p> Wednesday, July 16: Retreats, Focused Intense Workshops, Welcome Reception (Keynote speaker TBA)</p>
+    <p>Thursday, July 17: Workshops, After-Hours Meet-ups</p>
+    <p>Friday, July 18: Workshops, After-Hours Party</p>
+    <p> Saturday, July 19: Awards Ceremony, Pitch Sessions, Expo</p>
+    <p>A separate email with hotel reservation details will follow. We recommend booking early to secure your stay at
+        the conference hotel.</p>
+    <p>If you have any questions, please contact us at conference@rwa.org.</p>
+    <p>We look forward to seeing you at RWA2025 for an inspiring and memorable event!</p>
     <p>Best regards,<br>
-        RWA Board of Directors<br>
-        RWA Conference Committee</p>
+        The RWA Team<br>
+        Conference Committee</p>
+
 
     {{ @trans("Order_Emails.tickets_attached") }} <a
             href="{{route('showOrderDetails', ['order_reference' => $order->order_reference])}}">{{route('showOrderDetails', ['order_reference' => $order->order_reference])}}</a>.
